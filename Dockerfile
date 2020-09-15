@@ -20,6 +20,7 @@ RUN set -ex; \
     savedAptMark="$(apt-mark showmanual)"; \
     \
     apt-get update && \
+    rm /etc/localtime && 、
     ln -sv /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
     echo "Asia/Shanghai" > /etc/timezone && \
     # Clean up
